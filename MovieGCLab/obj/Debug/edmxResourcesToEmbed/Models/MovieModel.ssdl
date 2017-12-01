@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MovieDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Movies">
+    <Key>
+      <PropertyRef Name="MovieName" />
+    </Key>
+    <Property Name="MovieName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MovieCat" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MovieDesc" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MovieLength" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MovieDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MoviePic" Type="image" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MovieDBModelStoreContainer">
+    <EntitySet Name="Movies" EntityType="Self.Movies" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
